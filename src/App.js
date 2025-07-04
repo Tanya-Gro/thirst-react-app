@@ -1,5 +1,5 @@
 import React from "react";
-import { ManagedComponent } from "./components/Managed-component";
+import { ManagedComponent } from "./components/ManagedComponent";
 
 function App() {
 
