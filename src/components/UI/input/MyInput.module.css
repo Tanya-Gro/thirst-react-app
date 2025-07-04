@@ -1,0 +1,13 @@
+.myInput {
+  width: 100%;
+  padding: 5px 15px;
+  color: rgb(30, 5, 53);
+  font-size: 14px;
+  margin: 5px 0;
+  border: 1px solid rgb(149, 102, 193);
+}
+
+.myInput:disabled {
+  color: rgb(199, 168, 226);
+  background: rgb(255, 251, 251);
+}
