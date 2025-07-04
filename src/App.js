@@ -1,11 +1,12 @@
 import React from "react";
-import { ManagedComponent } from "./components/ManagedComponent";
+import ClassCounter from "./components/ClassCounter";
+
 
 function App() {
 
   return (
     <div className="App">
-      <ManagedComponent/>
+      <ClassCounter/>
     </div>
   );
 }
