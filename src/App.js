@@ -3,10 +3,13 @@ import'./styles/App.css';
 import { PostList } from "./components/PostList";
 import { PostForm } from "./components/PostForm";
 import { PostFilter } from "./components/PostFilter";
+import { MyModal } from "./components/UI/MyModal/MyModal";
+import { MyButton } from "./components/UI/button/MyButton";
 
 function App() {
 
   const [filter, setFilter] = useState({sort: '', query: ''});
+  const [modal, setModal] = useState(false);
   const [posts, setPosts] = useState([
     {id:1, title:'1JavaScript', body: 'Учимся подключать стили...3'},
     {id:2, title:'2JavaScript', body: 'Учимся подключать стили...2'},
@@ -28,7 +31,8 @@ function App() {
     [filter.query, sortedPosts]
   )
   const createPost = (newPost) => {     
-    setPosts([...posts,  newPost ]); 
+    setPosts([...posts,  newPost ]);
+    setModal(false);
   }
 
   const removePost = (post) => {     
@@ -37,7 +41,10 @@ function App() {
 
   return (
     <div className="App">
-      <PostForm create={createPost}/>
+      <MyButton onClick={()=>setModal(true)}>Создать пост</MyButton>
+      <MyModal visible={modal} setVisible={setModal}>
+        <PostForm create={createPost}/>
+      </MyModal>
       
       <hr className="line"/>
       <PostFilter
