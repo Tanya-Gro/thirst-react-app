@@ -1,0 +1,8 @@
+.sortSelect{
+  height: 25px;
+  padding: 0 15px;
+  color: rgb(30, 5, 53);
+  font-size: 14px;
+  margin: 5px 0;
+  border: 1px solid rgb(149, 102, 193);
+}
