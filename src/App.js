@@ -1,4 +1,4 @@
-import React, { useMemo, useState, createRef } from "react";
+import React, { useState } from "react";
 import'./styles/App.css';
 import { PostList } from "./components/PostList";
 import { PostForm } from "./components/PostForm";
@@ -18,7 +18,7 @@ function App() {
   ]);
   
   const sortedAndSearchedPosts = usePosts(posts, filter.sort, filter.query);
-  
+
   const createPost = (newPost) => {     
     setPosts([...posts,  newPost ]);
     setModal(false);
