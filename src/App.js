@@ -22,7 +22,7 @@ function App() {
   }
 
   async function fetchPosts() {
-    const posts = PostService.getAll();
+    const posts = await PostService.getAll();
     setPosts(posts);
   }
 
